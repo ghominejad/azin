@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" class="overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اشعار آذین طهماسبی فر</title>
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>یادبود آذین طهماسبی فر</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -12,6 +12,10 @@
         
         body { 
             font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        html {
+            overflow-x: hidden;
         }
 
         @keyframes float {
@@ -142,7 +146,7 @@
 
     <div class="content-wrapper">
 
-        <div class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 opacity-20 pointer-events-none">
                 <div class="absolute inset-0" style="background-image: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);"></div>
             </div>
@@ -170,13 +174,15 @@
                 </div>
 
                 <div class="flex flex-wrap gap-4 justify-center mt-12 animate-fadeInUp" style="animation-delay: 0.6s;">
-                    <button class="gradient-hero px-8 py-4 rounded-full font-semibold hover:shadow-2xl transition-all transform hover:scale-105 flex items-center gap-2">
+                    
+                    <a href="#book-launch" class="gradient-hero px-8 py-4 rounded-full font-semibold hover:shadow-2xl transition-all transform hover:scale-105 flex items-center gap-2">
                         مطالعه اشعار
                         <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="glass-effect px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all transform hover:scale-105">
+                    </a>
+                    
+                    <a href="#intro" class="glass-effect px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all transform hover:scale-105">
                         درباره شاعر
-                    </button>
+                    </a>
                 </div>
             </div>
 
@@ -188,7 +194,7 @@
         <div class="relative py-16 px-4">
             <div class="max-w-6xl mx-auto">
                 
-                <section class="mb-16 text-center section-card">
+                <section id="intro" class="mb-16 text-center section-card">
                     <div class="glass-effect rounded-3xl p-8 md:p-12 hover-lift">
                         <p class="text-xl md:text-2xl leading-relaxed mb-6">
                             به وب‌سایت یادبود آذین طهماسبی‌فر خوش آمدید.
@@ -229,7 +235,7 @@
                     </div>
                 </section>
 
-                <section class="mb-16 section-card">
+                <section id="book-launch" class="mb-16 section-card">
                     <div class="glass-effect rounded-3xl p-8 md:p-12 text-center hover-lift">
                         <i class="fas fa-calendar-alt text-5xl text-orange-400 mb-6"></i>
                         <h3 class="text-3xl font-bold mb-6">آیین رونمایی از کتاب</h3>
@@ -312,6 +318,7 @@
         }
 
         // Smooth scroll for internal links
+        // این اسکریپت لینک‌های جدید را پیدا کرده و اسکرول نرم را اجرا می‌کند
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
